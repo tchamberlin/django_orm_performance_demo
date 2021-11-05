@@ -1,0 +1,22 @@
+<head>
+  <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+</head>
+
+<body>
+  <table>
+    <thead>
+      <th>Name</th>
+      <th>Observatory</th>
+      <th>Site</th>
+    </thead>
+    {% for person in people %}
+      <tbody>
+        <tr>
+          <td>{{person}}</td>
+          <td>{{person.site.observatory}}</td>
+          <td>{{person.site}}</td>
+        </tr>
+      </tbody>
+    {% endfor %}
+  </table>
+</body>
